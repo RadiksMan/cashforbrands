@@ -79,6 +79,10 @@ gulp.task('style:build', function () {
       .pipe(less({
         //paths: [ path2.join(__dirname, 'less', 'includes') ]
       }))
+      .pipe(autoprefixer({
+        browsers: ['> 0%'],
+        cascade: false
+      }))
       .pipe(gulp.dest(path.build.css))
       .pipe(reload({stream: true}));
 
