@@ -1,5 +1,38 @@
 /* footer */
 
-	.footer{}
+	.footer{overflow: visible;
+
+		.footer-wrap{position: relative;padding-top: 20px;
+			&:before, &:after{content:'';background-color:red;position: absolute;}
+			&:before{left: 0;right: 0;bottom: 0;top: 0;transform:skewY(-3deg);}
+			&:after{bottom: -50px;left:0;right: 0;height: 100px;}
+		}
+
+		.footer-top{padding-top: 20px;
+			li{max-width: 24%;display: inline-block;vertical-align: top;margin-right: .9%;position: relative;top:0;
+				&:last-child{margin-right: 0;}
+				.chairsPosition(-15, 4);
+			}
+		}
+
+		.footer-bottom{padding: 0 10px 0 10%;margin: 0 auto;
+			li{display: inline-block;vertical-align: top;width: 31%;margin-right: 2%;
+				&:nth-child(3n){margin-right: 0;}
+			}
+		}
+
+	}
 
 /* /footer */
+
+/* mixins */
+
+	.chairsPosition(@value, @counter) when (@counter > 0){
+		
+		&:nth-child(@{counter}){
+			top:(@value * (@counter - 1))*1px;
+		}
+		.chairsPosition(@value, (@counter - 1));
+	}
+
+/* mixins */
