@@ -1,6 +1,6 @@
 /*header*/
 header{
-    .header-wrap{display: table;width: 100%;}
+    .header-wrap{display: table;width: 100%;padding-top: 15px;}
     .header-item{display: table-cell;width: 33.33%;vertical-align: middle;}
 
     .header-logo{
@@ -10,10 +10,61 @@ header{
         }
     }
 
-    .header-item.center{
-        a{ont-family: 'Open Sans Condensed';display: inline-block;font-weight: bold;font-size: 15px;text-transform: uppercase;color: #4f5153;background: #f4f5f5;margin-bottom: 3px;}
-        .header-login{}
-        .header-reg{color: white;background: #28a2d5;}
+    .header-item.center{padding-left: 65px;
+        a{font-family: 'Open Sans Condensed';display: inline-block;font-weight: bold;font-size: 15px;text-transform: uppercase;color: #4f5153;background: #f4f5f5;margin-bottom: 1px;text-decoration: none;padding:9px 15px;transform: skew(0, -3.5deg);transition:all ease-out .2s;
+            &:active{
+                span{top: 2px;position: relative;}
+            }
+        }
+        .header-login{
+            &:hover{background-color: #4f5153;color: #f4f5f5;}
+        }
+        .header-reg{color: white;background: #28a2d5;
+            &:hover{background-color: white;color: #28a2d5;}
+        }
     }
+    .header-item.right{text-align: right;
+        .search-form{display: inline-block;margin-bottom: 30px;}
+        .header-list{
+            a{font-family: 'Open Sans Condensed';display: inline-block;font-weight: bold;font-size: 15px;text-transform: uppercase;text-decoration: none;padding:9px 15px;transform: skew(0, -3.5deg);transition:all ease-out .2s;color: white;padding-right: 55px;background-color: #8ac757;position: relative;transition:background-color ease-out .3s;
+                span{position: relative;}
+                &:after{content: '';width: 37px;height: 100%;background-color: #7cb44d;position: absolute;top: 0;right: 0;transition:background-color ease-out .3s;}
+                &:before{content: '';height: 10px;width: 10px;position: absolute;top:50%;right: 12px;transform: translateY(-70%) rotate(45deg);border-width: 0px 4px 4px 0px;border-style: solid;border-color: white;z-index: 2;}
 
+                &:active{span{top: 2px;}}
+
+                &:hover{background-color: #7cb44d;
+                    &:after{background-color: #8ac757;}
+                }
+            }
+
+        }
+    }
 }
+/* /header */
+
+/* search input */
+.search-input{opacity: 0;position: relative;
+    .search-input-wrap{width: 100%;max-width: 150px;height: 40px;border:1px solid #d2d2d2;position: relative;z-index: 1;float: none;transform: skew(-10deg, 0deg);padding:0px 20px;transition:all ease-out .2s;
+        input{color: #6b6b6b;font-size: 15px;font-family: 'Open Sans';width: 100%;height: 100%;display: block;line-height: 38px;border:none;outline: none;border:none;transform: skew(10deg, 0deg);transition:all ease-out .2s;}
+    }
+    button[type=submit]{position: absolute;z-index: 2;height: 100%;right: 0;top: 0;width: 0px;background: url('../images/search-button-icon.png') center 40% no-repeat;border:none;cursor: pointer;padding: 0px;
+        &:active{top: 2px;}
+    }
+}
+.search-form{position: relative;
+    &.active{width: 100%;
+        .search-title .search-title-text{transform: skew(-7deg, 0) translate(-100%,0);}
+        .search-title .search-title-icon{transform: translate(100%,0);}
+        .search-input{opacity: 1;
+            .search-input-wrap{max-width: 345px;float: right;}
+            button[type=submit]{width: 45px;padding: 1px 6px;}
+        }
+    }
+    .search-title{position: absolute;top: 0;pointer-events: none;overflow: hidden;
+        .search-title-text{font-family: 'Open Sans Condensed';color: #000;font-weight: bold;display: inline-block;vertical-align: middle;text-transform: uppercase;    transform: skew(-7deg, 0);transition:transform ease-out .3s;}
+        .search-title-icon{background-image: url(../images/search-title-icon.png);background-repeat: no-repeat;background-position: center center;display: inline-block;vertical-align: middle;width: 34px;height: 36px;transition:transform ease-out .3s;}
+    }
+}
+
+/* /search input */
