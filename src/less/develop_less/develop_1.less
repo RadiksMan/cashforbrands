@@ -1,10 +1,19 @@
+
+/* wrapper */
+
+	.wrapper{position: relative;padding: 50px 0 50px 0;
+		&:before{content:'';position: absolute;top: 0;right:0;bottom:0;left:0;background-color: #f0f0f0;transform:skewY(-3.4deg);}
+	}
+
+/* /wrapper */
+
 /* footer */
 
 	.footer{overflow: visible;
 
 		.footer-wrap{position: relative;padding-top: 20px;
 			&:before, &:after{content:'';background-color:#fff;position: absolute;}
-			&:before{left: 0;right: 0;bottom: 0;top: 0;transform:skewY(-3deg);}
+			&:before{left: 0;right: 0;bottom: 0;top: 0;transform:skewY(-3.4deg);}
 			&:after{bottom: -50px;left:0;right: 0;height: 100px;}
 		}
 
@@ -35,6 +44,27 @@
 	}
 
 /* /footer */
+
+/* main-right */
+
+	.main-right{
+
+		.main-right-list{position: relative;display: inline-block;
+			
+		}
+
+		.popular-search-field{
+			.search-form{
+				.search-input{opacity: 1;
+					.search-input-wrap{float: right;max-width: 345px;background-color: #fff;}
+					button[type="submit"]{width: 45px;padding:1px 6px;}
+				}
+			}
+		}
+
+	}
+
+/* /main-right */
 
 /* mixins */
 
