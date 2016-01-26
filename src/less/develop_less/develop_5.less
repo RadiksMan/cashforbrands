@@ -6,9 +6,10 @@
         }
         .blue-fit{height:160px; width:100%; background-color:rgba(30, 120, 176, 1); position: relative; transform: matrix(1, -0.06, 0, 1, 0, 0); z-index: 100;
             .dot-wrap{overflow: hidden;position: absolute; width: 1920px; height: 160px;}
-            .dot{box-shadow:0px 0px 144px 33px rgba(0, 0, 0, 0.75); width: 0; height: 0; position: absolute; left: 895px; top: 126px;z-index: -1;
-                &:nth-child(2){    left: 1377px;  top: 35px;}
-                &:nth-child(3){left:420px; top: 10px;}
+            .dot{box-shadow:0px 0px 144px 33px rgba(0, 0, 0, 0.75); width: 0; height: 0; position: absolute; left: 895px; top: 126px;z-index: -1; animation-name: example1;  animation-duration: 40s;  animation-iteration-count: infinite; animation-timing-function: linear;
+                &:nth-child(2){    left: 1377px;  top: 35px; animation-name: example2; }
+                &:nth-child(3){left:420px; top: 10px; animation-name: example3; }
+
             }
             a{text-decoration: none; float:left; background-image: url('../images/bg5.png'); background-position: left 34px; background-repeat: no-repeat; height: 160px; position: relative;
                 &:nth-child(3){
@@ -91,7 +92,7 @@
         .title{font: bold 30px/30px 'Open Sans Condensed'; color:#1e78b0; text-transform: uppercase; padding: 27px 0 31px;}
         .comments-wrap{
             .item{     margin-bottom: 37px;
-                .avatar{width:112px; height: 112px; border-radius: 50%; border: 5px solid #fff; position: relative; overflow: hidden; float: left;
+                .avatar{width:112px; height: 112px; border-radius: 50%; border: 5px solid #fff; position: relative; overflow: hidden; float: left; transition:all 500ms;
                     img{ max-width: none; position: absolute; left:50%; top:50%; transform: translate(-50%, -50%);}
                 }
                 .content{ padding-left: 121px;
@@ -119,3 +120,22 @@
         }
     }
 /*END left*/
+@keyframes example1 {
+    0%   {left:420px; top: 10px;}
+    25%  {left: 895px; top: 126px;}
+    50%  {left:420px; top: 10px;}
+    75%  {left: 1377px;  top: 35px;}
+    100% {left:420px; top: 10px;}
+}
+@keyframes example2 {
+    0%   {left: 1200px;  top: 1px;}
+    25%  {left:300px; top: 126px;}
+    50%  {left: 700px; top: 150px;}
+    100% {left: 1377px;  top: 35px;}
+}
+@keyframes example3 {
+    0%   {left: 895px; top: 10px;}
+    25%  {left:420px; top: 10px;}
+    50%  {left: 1377px;  top: 126px;}
+    100% {left: 895px; top: 10px;}
+}
