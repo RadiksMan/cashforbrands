@@ -92,9 +92,9 @@ function validate(form, options){
             }
         })
 
-        if($('#item-checkbox',$form).length) {
-            console.log('tem-checkbox');
-            $('#item-checkbox',$form).rules( "add",
+        if($('#item_checkbox',$form).length) {
+            console.log('tem_checkbox');
+            $('#item_checkbox',$form).rules( "add",
             {
                 messages: {
                     required: "Вы пропустили"
