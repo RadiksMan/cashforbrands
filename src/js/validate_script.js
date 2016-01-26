@@ -70,16 +70,6 @@ function validate(form, options){
             });
         }
 
-        if($('#item-checkbox',$form).length) {
-            console.log('tem-checkbox');
-            $('#item-checkbox',$form).rules( "add",
-            {   required: true,
-                // messages: {
-                //     required: "Вы пропустили"
-                //  }
-            });
-        }
-
         if($('.tel-mask[required]',$form).length){
             $('.tel-mask[required]',$form).rules("add",
             {
@@ -101,6 +91,16 @@ function validate(form, options){
                 });
             }
         })
+
+        if($('#item-checkbox',$form).length) {
+            console.log('tem-checkbox');
+            $('#item-checkbox',$form).rules( "add",
+            {
+                messages: {
+                    required: "Вы пропустили"
+                 }
+            });
+        }
     }
 }
 
@@ -156,7 +156,7 @@ function Maskedinput(){
 
 
 $(document).ready(function(){
-   validate('#header-login-popup .popup-form', {submitFunction:validationCall});
-   validate('#header-reg-popup .popup-form', {submitFunction:validationCall});
+   validate('#header-login-popup .popup-form');
+   validate('#header-reg-popup .popup-form');
    Maskedinput();
 });
