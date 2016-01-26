@@ -16,15 +16,17 @@ function fancyboxPop(){
         padding:'0px',
         openMethod : 'dropIn',
         openSpeed : 250,
-
         closeMethod : 'dropOut',
         closeSpeed : 150,
-
         nextMethod : 'slideIn',
         nextSpeed : 250,
-
         prevMethod : 'slideOut',
-        prevSpeed : 250
+        prevSpeed : 250,
+        closeBtn:false
+    });
+
+    $(document).on('click', '.default-close', function(event) {
+        $.fancybox.close();
     });
 }
 
