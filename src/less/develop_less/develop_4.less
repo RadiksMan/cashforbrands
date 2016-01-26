@@ -71,3 +71,18 @@ header{
 }
 
 /* /search input */
+
+/*pop up main*/
+.popup-main{top: 0 !important;left: 0 !important;max-width: 100vw;right: 0 !important;width: auto !important;overflow: visible;padding-bottom: 100px;
+    &:after{content: '';background-color: #8ac757;background-position: center bottom;background-repeat: no-repeat;width: 100%;height: 1000px;position: absolute;bottom: 87px;left:0;transform: skew(0, -3.5deg);}
+    &:before{content: '';background-image: url(../images/popup-main-bg.png);background-position: center center;background-repeat: no-repeat;width: 832px;height: 319px;position: absolute;top: 0;left:50%;z-index: 2;transform: translateX(-50%);}
+    .fancybox-inner{margin: 0 auto;width: auto !important;}
+    .fancybox-skin{border-radius: 0px;box-shadow: none;background-color: inherit;}
+}
+.pop-main{width: 100%;min-height: 285px;
+    .pop-item{float: left;
+        &.item-1{width: 30%;}
+        &.item-2{width: 30%;}
+        &.item-3{width: 40%;}
+    }
+}
