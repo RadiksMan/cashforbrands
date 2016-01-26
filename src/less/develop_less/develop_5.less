@@ -6,9 +6,9 @@
         }
         .blue-fit{height:160px; width:100%; background-color:rgba(30, 120, 176, 1); position: relative; transform: matrix(1, -0.06, 0, 1, 0, 0); z-index: 100;
             .dot-wrap{overflow: hidden;position: absolute; width: 1920px; height: 160px;}
-            .dot{box-shadow:0px 0px 144px 33px rgba(0, 0, 0, 0.75); width: 0; height: 0; position: absolute; left: 895px; top: 126px;z-index: -1; animation-name: example1;  animation-duration: 40s;  animation-iteration-count: infinite; animation-timing-function: linear;
-                &:nth-child(2){    left: 1377px;  top: 35px; animation-name: example2; }
-                &:nth-child(3){left:420px; top: 10px; animation-name: example3; }
+            .dot{box-shadow:0px 0px 144px 33px rgba(0, 0, 0, 0.75); width: 0; height: 0; position: absolute; left: 895px; top: 126px;z-index: -1;  animation-name: example1;  animation-duration: 40s;  animation-iteration-count: infinite; animation-timing-function: linear;
+                &:nth-child(2){    left: 1377px;  top: 35px;  animation-name: example2; }
+                &:nth-child(3){left:420px; top: 10px;  animation-name: example3; }
 
             }
             a{text-decoration: none; float:left; background-image: url('../images/bg5.png'); background-position: left 34px; background-repeat: no-repeat; height: 160px; position: relative;
@@ -135,6 +135,63 @@
     100% {left: 1200px;  top: 35px;}
 }
 @keyframes example3 {
+    0%   {left: 895px; top: 10px;}
+    25%  {left:420px; top: 10px;}
+    50%  {left: 1377px;  top: 126px;}
+    100% {left: 895px; top: 10px;}
+}
+@-moz-keyframes example1 {
+    0%   {left:420px; top: 10px;}
+    25%  {left: 895px; top: 126px;}
+    50%  {left:420px; top: 10px;}
+    75%  {left: 1377px;  top: 35px;}
+    100% {left:420px; top: 10px;}
+}
+@-moz-keyframes example2 {
+    0%   {left: 1200px;  top: 35px;}
+    25%  {left:300px; top: 126px;}
+    50%  {left: 700px; top: 150px;}
+    100% {left: 1200px;  top: 35px;}
+}
+@-moz-keyframes example3 {
+    0%   {left: 895px; top: 10px;}
+    25%  {left:420px; top: 10px;}
+    50%  {left: 1377px;  top: 126px;}
+    100% {left: 895px; top: 10px;}
+}
+@-webkit-keyframes example1 {
+    0%   {left:420px; top: 10px;}
+    25%  {left: 895px; top: 126px;}
+    50%  {left:420px; top: 10px;}
+    75%  {left: 1377px;  top: 35px;}
+    100% {left:420px; top: 10px;}
+}
+@-webkit-keyframes example2 {
+    0%   {left: 1200px;  top: 35px;}
+    25%  {left:300px; top: 126px;}
+    50%  {left: 700px; top: 150px;}
+    100% {left: 1200px;  top: 35px;}
+}
+@-webkit-keyframes example3 {
+    0%   {left: 895px; top: 10px;}
+    25%  {left:420px; top: 10px;}
+    50%  {left: 1377px;  top: 126px;}
+    100% {left: 895px; top: 10px;}
+}
+@-o-keyframes example1 {
+    0%   {left:420px; top: 10px;}
+    25%  {left: 895px; top: 126px;}
+    50%  {left:420px; top: 10px;}
+    75%  {left: 1377px;  top: 35px;}
+    100% {left:420px; top: 10px;}
+}
+@-o-keyframes example2 {
+    0%   {left: 1200px;  top: 35px;}
+    25%  {left:300px; top: 126px;}
+    50%  {left: 700px; top: 150px;}
+    100% {left: 1200px;  top: 35px;}
+}
+@-o-keyframes example3 {
     0%   {left: 895px; top: 10px;}
     25%  {left:420px; top: 10px;}
     50%  {left: 1377px;  top: 126px;}
