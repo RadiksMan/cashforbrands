@@ -91,6 +91,16 @@ function validate(form, options){
                 });
             }
         })
+
+        if($('#item-checkbox',$form).length) {
+            console.log('tem-checkbox');
+            $('#item-checkbox',$form).rules( "add",
+            {
+                messages: {
+                    required: "Вы пропустили"
+                 }
+            });
+        }
     }
 }
 
@@ -144,21 +154,9 @@ function Maskedinput(){
     }
 }
 
-/*fansybox на форме*/
-function fancyboxForm(){
-  $('.fancybox-form').fancybox({
-    openEffect  : 'fade',
-    closeEffect : 'fade',
-    autoResize:true,
-    wrapCSS:'fancybox-form',
-    'closeBtn' : true,
-    fitToView:true,
-    padding:'0'
-  })
-}
 
 $(document).ready(function(){
-   validate('#call-popup .contact-form', {submitFunction:validationCall});
+   validate('#header-login-popup .popup-form');
+   validate('#header-reg-popup .popup-form');
    Maskedinput();
-   fancyboxForm();
 });

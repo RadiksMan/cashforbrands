@@ -33,6 +33,10 @@ function oneHeightItems(){
     }
 
     oneHeight($('.oneHeight'));
+
+    $('.offers-wrap-line').each(function(){
+      oneHeight($('.offers-wrap-item-text'));
+    });
 }
 
 /*scroll animation*/
@@ -79,7 +83,9 @@ function goTo(){
 
 /* DOCUMENT READY  */
 $(document).ready(function() {
-    //oneHeightItems();
+
+    oneHeightItems();
+
     $('.footer_placeholder').height($('.footer').outerHeight());
 
     //goTo();
@@ -87,6 +93,8 @@ $(document).ready(function() {
 });
 
 $(window).load(function(){
+
+  oneHeightItems();
 
   $('.footer_placeholder').height($('.footer').outerHeight());
 
